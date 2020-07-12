@@ -10,7 +10,7 @@ class MarkerRepository {
   }
 
   async findMany () {
-    return markers.slice(50, 300);
+    return markers.slice(0, 1000);
   }
 }
 

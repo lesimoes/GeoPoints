@@ -1,14 +1,15 @@
-const checkStatusPath = {
+const checkstatus = {
   get: {
     tags: ['Status'],
-    summary: 'Health check API',
-    response: {
+    summary: 'Check Status API',
+    responses: {
       200: {
-        description: 'Success',
+        description: 'Returns OK with API is alive!',
         content: {
           'application/json': {
             schema: {
-              $ref: '#/schemas/checkstatus',
+              type: 'object',
+              example: { status: 'Ok' },
             },
           },
         },
@@ -16,4 +17,4 @@ const checkStatusPath = {
     },
   },
 }
-module.exports = checkStatusPath;
+module.exports = { checkstatus };

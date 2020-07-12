@@ -2,10 +2,11 @@ const createCluster = require('./create-clusters');
 const { GEO } = require('./enum/coordinates');
 
 let lastZoom;
-
+const clusterCache = [];
+let clustersList;
 const listCluster = async () => {
   const clusterData = await createCluster();
-  const clustersList = clusterData.getClusters(
+  clustersList = clusterData.getClusters(
     [GEO.WESTLNG, GEO.SOUTHLAT, GEO.EASTLNG, GEO.NORTHLAT],
     10
   );
@@ -14,10 +15,10 @@ const listCluster = async () => {
 };
 
 const listWithBounds = async ({ zoom, bounds }) => {
-  // if (zoom === lastZoom) return clustersList;
   const clusterData = await createCluster();
-  console.time();
-  const clustersList = clusterData.getClusters(
+  if (lastZoom === zoom) return clustersList;
+  if (clusterCache[zoom] !== undefined) return clusterCache[zoom];
+  clustersList = clusterData.getClusters(
     [
       Number(bounds.nwLng) || GEO.WESTLNG,
       Number(bounds.seLat) || GEO.SOUTHLAT,
@@ -26,10 +27,9 @@ const listWithBounds = async ({ zoom, bounds }) => {
     ],
     zoom
   );
-  console.log('SIZE', clustersList.length, 'Zoom', zoom)
-  console.timeEnd();
   lastZoom = zoom;
-  return clustersList;
+  clusterCache[zoom] = clustersList;
+  return clustersList
 }
 module.exports = {
   listCluster,
