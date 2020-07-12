@@ -1,11 +1,12 @@
 FROM node:14-alpine
 
-WORKDIR /src/
+RUN mkdir -p /src/api
+WORKDIR /src/api
 
-COPY package.json package-lock.json /src/
+COPY package.json package-lock.json /src/api/
 
 RUN npm ci --silent
 
-COPY . . 
+COPY . /src/api
 
-CMD npm start
+CMD ["npm", "run", "start"]

@@ -5,6 +5,14 @@ const GEO = Object.freeze({
   NORTHLAT: -23.392082002769882,
 });
 
+// const GEO = Object.freeze({
+//   WESTLNG: -50,
+//   SOUTHLAT: -30,
+//   EASTLNG: 30,
+//   NORTHLAT: 50,
+// });
+
+
 module.exports = {
   GEO,
 };
