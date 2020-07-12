@@ -1,10 +1,10 @@
 # GeoPoints
 A simple project with React + Node + Express to render a lot of geopoints :)
 
-![example](https://s7.gifyu.com/images/geopoints.gif)
+![example](https://github.com/lesimoes/GeoPoints/blob/master/geopoints.gif)
 
 ### Tooling:
-</br>
+
 NodeJs</br>
 Express</br>
 React</br>
