@@ -15,7 +15,8 @@ And some enums, decorators and architecture based on clean + DDD :sunglasses:
 
 ### How to run:
 
-*** Warning
+***Warning***
+
 Put your Google Maps API Secret Key in front env file: 'REACT_APP_GOOGLE_API'
 Here: https://github.com/lesimoes/GeoPoints/blob/master/front/.env
 
