@@ -41,7 +41,7 @@ export default function GoogleMap()  {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <GoogleMapReact 
-        bootstrapURLKeys={{key: 'AIzaSyDoUsWiQB3I5XJvC2eXYlk4GJX_bsn_ZOI'}}
+        bootstrapURLKeys={{key: process.env.REACT_APP_GOOGLE_API}}
         defaultCenter={{ lat: -23.31509536897015, lng: -46.57099951314362 }}
         defaultZoom={10}
         distanceToMouse={()=>{}}

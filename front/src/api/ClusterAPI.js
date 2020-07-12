@@ -8,7 +8,7 @@ const useClustersWithBounds = ({
 }) => {
 
 
-	const url = `http://localhost:3000/api/clusters/bounds?zoom=${zoom}
+	const url = `${process.env.REACT_APP_API_HOST}/api/clusters/bounds?zoom=${zoom}
       &nwLng=${bounds.nw.lng}
       &seLat=${bounds.se.lat}
       &seLng=${bounds.se.lng}
