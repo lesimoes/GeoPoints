@@ -11,12 +11,14 @@ services:
     command: npm run start
     
   client:
-    build: ./client
+    build: ./front
+    environment: 
+      - REACT_APP_PORT={REACT_APP_PORT}
     ports:
-      - 3001:3001
+      - ${REACT_APP_PORT}:${REACT_APP_PORT}
     volumes:
-      - ./client/src:/srv/app/client/src
-      - ./client/public:/srv/app/client/public
+      - ./front/src:/srv/app/front/src
+      - ./front/public:/srv/app/front/public
     links: 
       - api
     stdin_open: true
