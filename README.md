@@ -11,6 +11,8 @@ React</br>
 Docker</br>
 Swagger</br>
 
+And some enums, decorators and architecture based on clean + DDD :sunglasses:
+
 ### How to run:
 
 Build and run (first time) </br>`docker-compose up --b`
