@@ -7,7 +7,7 @@ const createCluster = async () => {
   if (clusters !== undefined) return clusters;
   const geoJsonData = await geoPointsRepository.findAll();
   clusters = new Supercluster({
-    log: true,
+    log: false,
     radius: 75,
     maxZoom: 15,
     minZoom: 10,

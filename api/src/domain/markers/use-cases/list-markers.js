@@ -2,6 +2,6 @@
 const markersRepository = require('../../../infra/markers/marker-repository');
 
 const listMarkers = async () => {
-  return markersRepository.findMany();
+  return markersRepository.findAll();
 };
 module.exports = listMarkers;

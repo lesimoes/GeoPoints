@@ -29,8 +29,8 @@ const options = {
     ],
     paths: {
       '/checkstatus': getCheckstatus,
-      '/markers': listClusters,
-      '/clusters': listMarkers,
+      '/clusters': listClusters,
+      '/markers': listMarkers,
       '/clusters/:clusterId': getClusterId,
       '/clusters/bounds': getClusterBounds,
     },
