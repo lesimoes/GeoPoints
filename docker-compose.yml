@@ -13,9 +13,9 @@ services:
   client:
     build: ./front
     environment: 
-      - REACT_APP_PORT={REACT_APP_PORT}
+      - REACT_APP_PORT=3001
     ports:
-      - ${REACT_APP_PORT}:${REACT_APP_PORT}
+      - 3001:3001
     volumes:
       - ./front/src:/srv/app/front/src
       - ./front/public:/srv/app/front/public
