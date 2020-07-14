@@ -1,7 +1,7 @@
 const httpStatusCode = Object.freeze({
   OK: 200,
-  BAD_REQUEST: 500,
-  SERVER_ERROR: 400,
+  BAD_REQUEST: 400,
+  SERVER_ERROR: 500,
 })
 
 const httpStatusText = Object({

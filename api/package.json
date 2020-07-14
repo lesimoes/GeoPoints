@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "npx nodemon src/main/server.js",
-    "start": "node src/main/server.js"
+    "start": "node src/main/server.js",
+    "test:watch": "npx jest --watch"
   },
   "author": "",
   "license": "ISC",
@@ -24,9 +25,10 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-prettier": "^3.1.4",
-    "nodemon": "^2.0.4",
-    "prettier": "^2.0.5",
     "jest": "^26.1.0",
-    "ntl": "^5.1.0"
+    "nodemon": "^2.0.4",
+    "ntl": "^5.1.0",
+    "prettier": "^2.0.5",
+    "supertest": "^4.0.2"
   }
 }
