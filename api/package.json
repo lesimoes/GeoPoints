@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx jest",
     "start:dev": "npx nodemon src/main/server.js",
     "start": "node src/main/server.js",
     "test:watch": "npx jest --watch"
